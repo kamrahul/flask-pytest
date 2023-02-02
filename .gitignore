@@ -5,3 +5,4 @@ venv/
 *.pyo
 *.pyc
 .DS_Store
+.coverage

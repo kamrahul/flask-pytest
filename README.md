@@ -44,10 +44,13 @@ def test_client():
  </pre>
 
 # Run test command 
-> python -m pytest
+> run -m pytest
 
 # Run coverage
-> python -m pytest
+> coverage run -m pytest
+
+# Coverage report
+> coverage report
 
 # Setting up requirements
 

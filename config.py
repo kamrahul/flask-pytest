@@ -1,6 +1,5 @@
 import os
 from datetime import timedelta
-from celery.schedules import crontab
 
 class Config(object):
     DEBUG = True
@@ -17,14 +16,14 @@ class Config(object):
     CELERY_RESULT_BACKEND ="redis://redis:6379/0"
     CELERY_DEFAULT_QUEUE ="test_queue"
 
-    # Celery Beat 
-    CELERYBEAT_SCHEDULE = {
-    'periodic_task': {
-        'task': 'apps.mqtt_module.task.periodic_task',
-        # Every minute
-        'schedule': crontab(minute="*"),
-        }
-    }
+    # # Celery Beat 
+    # CELERYBEAT_SCHEDULE = {
+    # 'periodic_task': {
+    #     'task': 'apps.mqtt_module.task.periodic_task',
+    #     # Every minute
+    #     'schedule': crontab(minute="*"),
+    #     }
+    # }
 
 
 
